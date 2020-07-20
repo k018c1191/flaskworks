@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+    <body>
+        <h1> 70点以上の科目は: </h1>
+        <h2>
+            {% for obj in list %}
+                {% if 70 < list[obj] %}
+                    {{obj}}
+                {% endif %}
+            {% endfor %}
+        </h2>
+    </body>
+
+</html>
