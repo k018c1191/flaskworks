@@ -20,7 +20,7 @@ def index():
     dt = datetime.datetime.now()
     date = dt.strftime("%m/%d %H:%M")
     step = request.form.get('step')
-    if step != '':
+    if step is not None:
         steps.append((date, int(step)))
     average = get_average(steps)
     return render_template('kadai5-3index.html', steps=steps, average=average)
